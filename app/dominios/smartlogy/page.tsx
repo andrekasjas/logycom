@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { ArrowRight, CheckCircle2 } from "lucide-react"
 import Image from "next/image"
 import { safeGetItem } from "@/lib/storage-utils"
+import { RouteMapModal } from "@/components/route-map-modal"
 
 export default function SmartlogyPage() {
   const [moduleProgress, setModuleProgress] = useState<Record<string, number>>({})
@@ -78,19 +79,46 @@ export default function SmartlogyPage() {
 
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 text-balance">{"$MAR+L🪙GY"}</h1>
             <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed mb-8 px-4">
-              El dominio "$MAR+L🪙GY" trata de una herramienta digital educativa diseñada especialmente para personas
-              con discapacidad cognitiva leve, con el fin de enseñarles procesos lógico-matemáticos y el manejo del
-              dinero de manera práctica, accesible y adaptada a sus capacidades.
+              "$MAR+L🪙GY" trata de una herramienta digital educativa diseñada especialmente para personas con
+              discapacidad cognitiva leve, implementando procesos lógico-matemáticos, manejo del dinero y educación
+              financiera de manera práctica, accesible y adaptada a sus capacidades.
             </p>
             <div className="flex flex-wrap gap-4 justify-center px-4">
-              <Button size="lg" className="gap-2">
+              <Button
+                size="lg"
+                className="gap-2"
+                onClick={() => (window.location.href = "/dominios/smartlogy/evaluacion")}
+              >
                 Comenzar Aprendizaje
                 <ArrowRight className="w-5 h-5" />
               </Button>
-              <Button size="lg" variant="outline" className="bg-background/50 backdrop-blur-sm">
-                Ver Demostración
-              </Button>
+              <RouteMapModal
+                title="Ruta de Atención SMARTLOGY"
+                imageSrc="/ruta-smartlogy.png"
+                imageAlt="Ruta de Atención SMARTLOGY"
+              />
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Ruta de Atención SMARTLOGY */}
+      <section className="py-16 bg-secondary/20">
+        <div className="container mx-auto px-6">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">Ruta de Atención SMARTLOGY</h2>
+            <p className="text-base sm:text-lg text-muted-foreground leading-relaxed px-4">
+              Guía paso a paso del proceso de aprendizaje
+            </p>
+          </div>
+          <div className="max-w-5xl mx-auto">
+            <Image
+              src="/ruta-smartlogy.png"
+              alt="Ruta de Atención SMARTLOGY"
+              width={1400}
+              height={700}
+              className="w-full h-auto rounded-lg shadow-lg"
+            />
           </div>
         </div>
       </section>
@@ -114,11 +142,9 @@ export default function SmartlogyPage() {
                 <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-4xl">📋</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-3 text-balance">EVALUACIÓN</h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Examen de niveles de pensamiento preparatorio y Operatorio Jacobo Feldman
-                </p>
-                <p className="text-sm text-muted-foreground">9 actividades de evaluación cognitiva</p>
+                <h3 className="text-2xl font-bold mb-3 text-balance">procesos lógicos matemáticos</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">Evaluación de procesos lógicos matemáticos</p>
+                <p className="text-sm text-muted-foreground">14 actividades de evaluación cognitiva</p>
                 {moduleProgress.evaluacion > 0 && (
                   <div className="mt-4">
                     <div className="flex items-center justify-between mb-2">
@@ -155,7 +181,7 @@ export default function SmartlogyPage() {
                 </div>
                 <h3 className="text-2xl font-bold mb-3 text-balance">MANEJO DEL DINERO</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
-                  Aprende a identificar, contar, pagar y dar vueltas
+                  Procesos lógico-matemáticos, manejo del dinero y educación financiera
                 </p>
                 <p className="text-sm text-muted-foreground">6 actividades prácticas con dinero</p>
                 {moduleProgress["manejo-dinero"] > 0 && (

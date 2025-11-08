@@ -34,7 +34,7 @@ export default function ClasificacionPage() {
     { id: "olla", emoji: "🍲", category: "cocina", label: "Olla" },
     { id: "cuchara", emoji: "🥄", category: "cocina", label: "Cuchara" },
     { id: "silla", emoji: "🪑", category: "muebles", label: "Silla" },
-    { id: "mesa", emoji: "🪑", category: "muebles", label: "Mesa" },
+    { id: "mesa", emoji: "🛋️", category: "muebles", label: "Mueble" },
     { id: "camisa", emoji: "👕", category: "ropa", label: "Camisa" },
     { id: "zapatos", emoji: "👟", category: "ropa", label: "Zapatos" },
   ]
@@ -317,21 +317,24 @@ export default function ClasificacionPage() {
                 </Button>
 
                 {result && (
-                  <div
-                    className={`p-4 rounded-lg flex items-center gap-3 ${
-                      result === "correct" ? "bg-green-50 text-green-900" : "bg-red-50 text-red-900"
-                    }`}
-                  >
-                    {result === "correct" ? (
-                      <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
-                    ) : (
-                      <XCircle className="w-5 h-5 flex-shrink-0" />
-                    )}
-                    <span>
-                      {result === "correct"
-                        ? "¡Excelente! Pasando a la siguiente actividad..."
-                        : "Algunos objetos no están en el grupo correcto. Intenta nuevamente."}
-                    </span>
+                  <div className="flex justify-center">
+                    <div
+                      className={`inline-flex items-center gap-3 px-6 py-4 rounded-lg ${
+                        result === "correct" ? "bg-green-500 text-white" : "bg-red-500 text-white"
+                      }`}
+                    >
+                      {result === "correct" ? (
+                        <>
+                          <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
+                          <span className="font-semibold">Correcto</span>
+                        </>
+                      ) : (
+                        <>
+                          <XCircle className="w-5 h-5 flex-shrink-0" />
+                          <span className="font-semibold">Incorrecto</span>
+                        </>
+                      )}
+                    </div>
                   </div>
                 )}
               </div>
@@ -396,21 +399,24 @@ export default function ClasificacionPage() {
                 </Button>
 
                 {result && (
-                  <div
-                    className={`p-4 rounded-lg flex items-center gap-3 ${
-                      result === "correct" ? "bg-green-50 text-green-900" : "bg-red-50 text-red-900"
-                    }`}
-                  >
-                    {result === "correct" ? (
-                      <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
-                    ) : (
-                      <XCircle className="w-5 h-5 flex-shrink-0" />
-                    )}
-                    <span>
-                      {result === "correct"
-                        ? "¡Actividad completada! Redirigiendo..."
-                        : "Algunas figuras no están en el grupo correcto. Intenta nuevamente."}
-                    </span>
+                  <div className="flex justify-center">
+                    <div
+                      className={`inline-flex items-center gap-3 px-6 py-4 rounded-lg ${
+                        result === "correct" ? "bg-green-500 text-white" : "bg-red-500 text-white"
+                      }`}
+                    >
+                      {result === "correct" ? (
+                        <>
+                          <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
+                          <span className="font-semibold">Correcto</span>
+                        </>
+                      ) : (
+                        <>
+                          <XCircle className="w-5 h-5 flex-shrink-0" />
+                          <span className="font-semibold">Incorrecto</span>
+                        </>
+                      )}
+                    </div>
                   </div>
                 )}
               </div>

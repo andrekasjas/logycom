@@ -6,6 +6,7 @@ import { Footer } from "@/components/footer"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { ArrowLeft, CheckCircle2 } from "lucide-react"
+import Image from "next/image"
 
 export default function EvaluacionPage() {
   const [completedActivities, setCompletedActivities] = useState<string[]>([])
@@ -82,6 +83,48 @@ export default function EvaluacionPage() {
       icon: "📝",
       href: "/dominios/smartlogy/evaluacion/capacidad-apreciativa",
     },
+    {
+      id: "conservacion-peso",
+      title: "10. Noción de conservación de peso",
+      description: "¿Cuál pesa lo mismo?",
+      icon: "⚖️",
+      href: "/dominios/smartlogy/evaluacion/conservacion-peso",
+    },
+    {
+      id: "conservacion-volumen",
+      title: "11. Noción de conservación de volumen",
+      description: "¿Cuál tiene más agua?",
+      icon: "💧",
+      href: "/dominios/smartlogy/evaluacion/conservacion-volumen",
+    },
+    {
+      id: "manejo-automatico-numero",
+      title: "12. Manejo automático del número",
+      description: "Reconoce el número sin contar",
+      icon: "🎯",
+      href: "/dominios/smartlogy/evaluacion/manejo-automatico-numero",
+    },
+    {
+      id: "operaciones-matematicas",
+      title: "13. Operaciones matemáticas",
+      description: "Resuelve con lógica",
+      icon: "➕",
+      href: "/dominios/smartlogy/evaluacion/operaciones-matematicas",
+    },
+    {
+      id: "reversibilidad",
+      title: "14. Reversibilidad",
+      description: "Acción y operación inversa",
+      icon: "↩️",
+      href: "/dominios/smartlogy/evaluacion/reversibilidad",
+    },
+    {
+      id: "problemas-matematicos",
+      title: "15. Problemas matemáticos",
+      description: "Resuelve problemas matemáticos",
+      icon: "🧮",
+      href: "/dominios/smartlogy/evaluacion/problemas-matematicos",
+    },
   ]
 
   return (
@@ -100,11 +143,24 @@ export default function EvaluacionPage() {
 
           <div className="text-center mb-12 md:mb-16">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 text-balance">
-              EVALUACIÓN: Examen Jacobo Feldman
+              procesos lógicos matemáticos
             </h1>
             <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
               Evaluación de niveles de pensamiento preparatorio y operatorio
             </p>
+          </div>
+
+          <div className="mb-12 md:mb-16">
+            <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center">Ruta de Atención SMARTLOGY</h2>
+            <div className="max-w-4xl mx-auto">
+              <Image
+                src="/ruta-smartlogy.png"
+                alt="Ruta de Atención SMARTLOGY"
+                width={1200}
+                height={600}
+                className="w-full h-auto rounded-lg shadow-lg"
+              />
+            </div>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">

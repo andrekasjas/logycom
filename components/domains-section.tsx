@@ -26,7 +26,15 @@ export function DomainsSection() {
               onMouseEnter={() => setHoveredDomain("cognicom")}
               onMouseLeave={() => setHoveredDomain(null)}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/50 to-accent/50 opacity-70 group-hover:opacity-80 transition-opacity duration-300" />
+
+              <div className="absolute inset-0 opacity-10">
+                <img
+                  src="/cognitive-communication-brain-networks-neural-path.jpg"
+                  alt="COGNICOM"
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
               <div className="relative p-8 md:p-12">
                 <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -39,8 +47,9 @@ export function DomainsSection() {
                 </h3>
 
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Soluciones de comunicación cognitiva e inteligencia artificial que transforman la manera en que las
-                  organizaciones interactúan con sus usuarios.
+                  COGNICOM ofrece servicios a través de módulos de formación para incrementar las competencias y
+                  habilidades comunicativas dirigidas hacia la inclusión y/o emprendimientos para la autonomía de
+                  personas en condición de discapacidad.
                 </p>
 
                 <div className="flex items-center gap-2 text-primary font-semibold group-hover:gap-4 transition-all">
@@ -51,10 +60,10 @@ export function DomainsSection() {
                 {hoveredDomain === "cognicom" && (
                   <div className="mt-6 pt-6 border-t border-border animate-fade-in-up">
                     <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li>• Procesamiento de lenguaje natural</li>
-                      <li>• Chatbots inteligentes</li>
-                      <li>• Análisis de sentimientos</li>
-                      <li>• Automatización cognitiva</li>
+                      <li>• MÓDULO DE HABILIDADES COMUNICATIVAS</li>
+                      <li>• MÓDULO DE COMPETENCIAS COMUNICATIVAS</li>
+                      <li>• MÓDULO DE EMPLEO</li>
+                      <li>• MÓDULO DE IDEAS DE NEGOCIO</li>
                     </ul>
                   </div>
                 )}
@@ -69,7 +78,15 @@ export function DomainsSection() {
               onMouseEnter={() => setHoveredDomain("smartlogy")}
               onMouseLeave={() => setHoveredDomain(null)}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-gradient-to-br from-accent/50 to-primary/50 opacity-70 group-hover:opacity-80 transition-opacity duration-300" />
+
+              <div className="absolute inset-0 opacity-10">
+                <img
+                  src="/mathematics-money-coins-learning-education-numbers.jpg"
+                  alt="$MAR+L🪙GY"
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
               <div className="relative p-8 md:p-12">
                 <div className="w-20 h-20 bg-accent/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
@@ -82,8 +99,9 @@ export function DomainsSection() {
                 </h3>
 
                 <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Herramienta educativa para personas con discapacidad cognitiva leve, enseñando lógico-matemáticas y
-                  manejo del dinero de forma accesible.
+                  "$MAR+L🪙GY" trata de una herramienta digital educativa diseñada especialmente para personas con
+                  discapacidad cognitiva leve, implementando procesos lógico-matemáticos, manejo del dinero y educación
+                  financiera de manera práctica, accesible y adaptada a sus capacidades.
                 </p>
 
                 <div className="flex items-center gap-2 text-accent font-semibold group-hover:gap-4 transition-all">
@@ -94,10 +112,9 @@ export function DomainsSection() {
                 {hoveredDomain === "smartlogy" && (
                   <div className="mt-6 pt-6 border-t border-border animate-fade-in-up">
                     <ul className="space-y-2 text-sm text-muted-foreground">
-                      <li>• Matemáticas básicas adaptadas</li>
-                      <li>• Reconocimiento de dinero</li>
-                      <li>• Ejercicios prácticos de compra</li>
-                      <li>• Ahorro y planificación</li>
+                      <li>• procesos lógico-matemáticos</li>
+                      <li>• manejo del dinero</li>
+                      <li>• educación financiera</li>
                     </ul>
                   </div>
                 )}

@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button"
 import { BookOpen, ArrowRight } from "lucide-react"
 import Image from "next/image"
 import { safeGetItem } from "@/lib/storage-utils"
+import { RouteMapModal } from "@/components/route-map-modal"
 
 export default function CognicomPage() {
   const [enrolledModules, setEnrolledModules] = useState<string[]>([])
@@ -122,9 +123,9 @@ export default function CognicomPage() {
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-6 text-balance">COGNICOM</h1>
             <p className="text-lg sm:text-xl md:text-2xl text-muted-foreground leading-relaxed mb-8 px-4">
-              Soluciones de comunicación cognitiva e inteligencia artificial que transforman la manera en que las
-              organizaciones interactúan con sus usuarios. Desarrolla habilidades avanzadas en procesamiento de lenguaje
-              natural, chatbots inteligentes y automatización cognitiva.
+              COGNICOM ofrece servicios a través de módulos de formación para incrementar las competencias y habilidades
+              comunicativas dirigidas hacia la inclusión y/o emprendimientos para la autonomía de personas en condición
+              de discapacidad.
             </p>
             <div className="flex flex-wrap gap-4 justify-center px-4">
               <Button
@@ -135,6 +136,11 @@ export default function CognicomPage() {
                 Comenzar Ahora
                 <ArrowRight className="w-5 h-5" />
               </Button>
+              <RouteMapModal
+                title="Ruta de Atención COGNICOM"
+                imageSrc="/ruta-cognicom.png"
+                imageAlt="Ruta de Atención COGNICOM"
+              />
             </div>
           </div>
         </div>

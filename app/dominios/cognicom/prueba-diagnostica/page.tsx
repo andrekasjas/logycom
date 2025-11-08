@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import { LoadingScreen } from "@/components/loading-screen"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import {
@@ -23,6 +24,7 @@ type TestArea = "oral" | "lectura" | "escritura" | null
 type TestLevel = "basico" | "intermedio" | "avanzado" | null
 
 export default function PruebaDiagnosticaPage() {
+  const [isPageLoading, setIsPageLoading] = useState(true)
   const [selectedArea, setSelectedArea] = useState<TestArea>(null)
   const [currentLevel, setCurrentLevel] = useState<TestLevel>(null)
   const [showResult, setShowResult] = useState(false)
@@ -57,6 +59,8 @@ export default function PruebaDiagnosticaPage() {
 
   useEffect(() => {
     window.scrollTo(0, 0)
+
+    setIsPageLoading(false)
 
     if ("speechSynthesis" in window) {
       const loadVoices = () => {
@@ -439,6 +443,10 @@ export default function PruebaDiagnosticaPage() {
     setEscrituraBasico("")
     setEscrituraIntermedio("")
     setEscrituraAvanzado("")
+  }
+
+  if (isPageLoading) {
+    return <LoadingScreen />
   }
 
   // Area selection screen

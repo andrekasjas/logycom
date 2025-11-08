@@ -58,41 +58,40 @@ export function ContactSection() {
               </div>
             </Card>
 
-            <Card className="p-6 flex items-start gap-4">
-              <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Instagram className="w-6 h-6 text-accent" />
-              </div>
-              <div>
-                <h3 className="font-semibold mb-1">Instagram</h3>
-                <a
-                  href="https://instagram.com/logycom"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-accent transition-colors"
-                >
-                  @logycom
-                </a>
-              </div>
-            </Card>
+            <a
+              href="https://www.instagram.com/logycoms.a.s?igsh=dTFnaXZ5cm1mbHBz"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <Card className="p-6 flex items-start gap-4 hover:shadow-lg transition-shadow cursor-pointer">
+                <div className="w-12 h-12 bg-accent/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Instagram className="w-6 h-6 text-accent" />
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-1">Instagram</h3>
+                  <p className="text-muted-foreground">@logycoms.a.s</p>
+                </div>
+              </Card>
+            </a>
 
-            <Card className="p-6 flex items-start gap-4">
-              <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Music className="w-6 h-6 text-primary" />
-              </div>
-              <div>
-                <h3 className="font-semibold mb-1">TikTok</h3>
-                <a
-                  href="https://tiktok.com/@logycoms.as"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted-foreground hover:text-primary transition-colors"
-                >
-                  @logycoms.as
-                </a>
-              </div>
-            </Card>
+            <a
+              href="https://www.tiktok.com/@logycoms.a.s?_r=1&_t=ZS-9195kXU5azYI"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block"
+            >
+              <Card className="p-6 flex items-start gap-4 hover:shadow-lg transition-shadow cursor-pointer">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Music className="w-6 h-6 text-primary" />
+                </div>
+                <div>
+                  <h3 className="font-semibold mb-1">TikTok</h3>
+                  <p className="text-muted-foreground">@logycoms.a.s</p>
+                </div>
+              </Card>
+            </a>
           </div>
-          {/* </CHANGE> */}
 
           <Card className="p-8">
             <form onSubmit={handleSubmit} className="space-y-6">

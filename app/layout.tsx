@@ -8,9 +8,13 @@ const _geist = Geist({ subsets: ["latin"] })
 const _geistMono = Geist_Mono({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Cognicom - Plataforma Educativa",
-  description: "Plataforma educativa con dominios COGNICOM y $MAR+L🪙GY",
+  title: "LOGyCOM - Plataforma de Inclusión",
+  description:
+    "7 discapacidades unidas por la comunicación para la inclusión. Plataforma educativa con dominios COGNICOM y $MAR+L🪙GY",
   generator: "v0.app",
+  icons: {
+    icon: "/logo-logycom.png",
+  },
 }
 
 export default function RootLayout({
