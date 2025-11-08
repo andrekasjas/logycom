@@ -83,6 +83,9 @@ export default function EvaluacionPage() {
       icon: "📝",
       href: "/dominios/smartlogy/evaluacion/capacidad-apreciativa",
     },
+
+    /* Commented out activities 10-15 - only show first 9 */
+    /*
     {
       id: "conservacion-peso",
       title: "10. Noción de conservación de peso",
@@ -125,6 +128,7 @@ export default function EvaluacionPage() {
       icon: "🧮",
       href: "/dominios/smartlogy/evaluacion/problemas-matematicos",
     },
+    */
   ]
 
   return (
@@ -142,9 +146,7 @@ export default function EvaluacionPage() {
           </Button>
 
           <div className="text-center mb-12 md:mb-16">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 text-balance">
-              procesos lógicos matemáticos
-            </h1>
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 text-balance">Evaluación</h1>
             <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto px-2">
               Evaluación de niveles de pensamiento preparatorio y operatorio
             </p>
