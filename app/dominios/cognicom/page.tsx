@@ -32,10 +32,10 @@ export default function CognicomPage() {
       calculatedProgress.diagnostic = 0
     }
 
-    // Habilidades module progress (4 activities)
+    // Habilidades module progress (2 activities: Escucha Activa y Habla)
     if (progress.habilidades) {
       const completed = Object.values(progress.habilidades).filter(Boolean).length
-      calculatedProgress.habilidades = Math.round((completed / 4) * 100)
+      calculatedProgress.habilidades = Math.round((completed / 2) * 100)
     } else {
       calculatedProgress.habilidades = 0
     }
@@ -46,6 +46,30 @@ export default function CognicomPage() {
       calculatedProgress.competencias = Math.round((completed / 4) * 100)
     } else {
       calculatedProgress.competencias = 0
+    }
+
+    // Lecto Escritura module progress
+    if (progress.lectoescritura) {
+      const completed = Object.values(progress.lectoescritura).filter(Boolean).length
+      calculatedProgress.lectoescritura = Math.round((completed / 3) * 100)
+    } else {
+      calculatedProgress.lectoescritura = 0
+    }
+
+    // Conversacional module progress
+    if (progress.conversacional) {
+      const completed = Object.values(progress.conversacional).filter(Boolean).length
+      calculatedProgress.conversacional = Math.round((completed / 3) * 100)
+    } else {
+      calculatedProgress.conversacional = 0
+    }
+
+    // Empleo e Ideas de Negocio module progress
+    if (progress.empleo) {
+      const completed = Object.values(progress.empleo).filter(Boolean).length
+      calculatedProgress.empleo = Math.round((completed / 2) * 100)
+    } else {
+      calculatedProgress.empleo = 0
     }
 
     setModuleProgress(calculatedProgress)
@@ -64,6 +88,18 @@ export default function CognicomPage() {
       window.location.href = "/dominios/cognicom/competencias-comunicativas"
       return
     }
+    if (moduleId === "lectoescritura") {
+      window.location.href = "/dominios/cognicom/habilidades-lectoescritura"
+      return
+    }
+    if (moduleId === "conversacional") {
+      window.location.href = "/dominios/cognicom/habilidades-conversacionales"
+      return
+    }
+    if (moduleId === "empleo") {
+      window.location.href = "/dominios/cognicom/empleo-ideas-negocio"
+      return
+    }
     const newEnrolled = [...enrolledModules, moduleId]
     setEnrolledModules(newEnrolled)
     localStorage.setItem("enrolledModules", JSON.stringify(newEnrolled))
@@ -79,8 +115,7 @@ export default function CognicomPage() {
     {
       id: "habilidades",
       title: "Habilidades Comunicativas",
-      description:
-        "Desarrolla escucha activa, habla, lectoescritura y habilidades conversacionales mediante actividades interactivas y dinámicas",
+      description: "Desarrolla escucha activa y habla mediante actividades interactivas y dinámicas",
       level: "Básico-Intermedio",
     },
     {
@@ -89,6 +124,26 @@ export default function CognicomPage() {
       description:
         "Domina competencias lingüísticas, paralingüísticas, pragmáticas y próxemicas a través de ejercicios especializados",
       level: "Intermedio-Avanzado",
+    },
+    {
+      id: "lectoescritura",
+      title: "Habilidades Lecto Escritura",
+      description:
+        "Practica lectura y escritura mediante ejercicios de ordenamiento de textos, frases y completar textos",
+      level: "Básico-Intermedio",
+    },
+    {
+      id: "conversacional",
+      title: "Habilidades Conversacionales",
+      description:
+        "Desarrolla habilidades de conversación práctica con dinámicas interactivas y situaciones del día a día",
+      level: "Intermedio",
+    },
+    {
+      id: "empleo",
+      title: "Empleo e Ideas de Negocio",
+      description: "Aprende a redactar para vender productos y realiza entrevistas efectivas sobre diversos temas",
+      level: "Avanzado",
     },
   ]
 
@@ -150,7 +205,7 @@ export default function CognicomPage() {
       <section id="modulos" className="py-24 bg-secondary/30">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">Módulos de Aprendizaje</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">Módulos</h2>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed px-4">
               Evaluación diagnóstica y desarrollo de habilidades comunicativas integrales
             </p>

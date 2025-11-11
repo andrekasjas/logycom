@@ -319,7 +319,7 @@ export default function ClasificacionPage() {
                 {result && (
                   <div className="flex justify-center">
                     <div
-                      className={`inline-flex items-center gap-3 px-6 py-4 rounded-lg ${
+                      className={`w-auto inline-flex items-center gap-3 px-6 py-4 rounded-lg ${
                         result === "correct" ? "bg-green-500 text-white" : "bg-red-500 text-white"
                       }`}
                     >
@@ -401,7 +401,7 @@ export default function ClasificacionPage() {
                 {result && (
                   <div className="flex justify-center">
                     <div
-                      className={`inline-flex items-center gap-3 px-6 py-4 rounded-lg ${
+                      className={`w-auto inline-flex items-center gap-3 px-6 py-4 rounded-lg ${
                         result === "correct" ? "bg-green-500 text-white" : "bg-red-500 text-white"
                       }`}
                     >

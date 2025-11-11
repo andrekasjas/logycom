@@ -72,13 +72,12 @@ export default function SmartlogyPage() {
     <div className="min-h-screen">
       <Header />
 
-      {/* Hero Section con imagen de fondo */}
+      {/* Hero Section with Smartlogy logo */}
       <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden pt-20">
         <div
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage:
-              "url(/placeholder.svg?height=800&width=1600&query=colorful+education+learning+mathematics+coins+money+friendly)",
+            backgroundImage: "url(/mathematics-money-coins-learning-education-numbers.jpg)",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
@@ -90,7 +89,7 @@ export default function SmartlogyPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="w-32 h-32 mx-auto mb-8">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-10-29%20at%2010.29.38%20AM-IfBpOCPHh30fYCgJwJCCJltR1ULker.jpeg"
+                src="/smartlogy-logo.png"
                 alt="$MAR+L🪙GY Logo"
                 width={128}
                 height={128}
@@ -127,13 +126,13 @@ export default function SmartlogyPage() {
       <section id="modulos" className="py-24">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto text-center mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">Módulos de Aprendizaje</h2>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6 text-balance">Módulos</h2>
             <p className="text-base sm:text-lg text-muted-foreground leading-relaxed px-4">
               Evaluación completa y módulos de aprendizaje práctico
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+          <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
             <Card
               className="p-8 hover:shadow-lg transition-all cursor-pointer"
               onClick={() => (window.location.href = "/dominios/smartlogy/evaluacion")}
@@ -179,7 +178,7 @@ export default function SmartlogyPage() {
                 <div className="w-20 h-20 bg-blue-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-4xl">🧮</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-3 text-balance">Procesos Lógico Matemáticos</h3>
+                <h3 className="text-2xl font-bold mb-3 text-balance">Procesos Lógico-matemáticos</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   Desarrollo progresivo de habilidades lógico-matemáticas
                 </p>
@@ -220,10 +219,8 @@ export default function SmartlogyPage() {
                 <div className="w-20 h-20 bg-amber-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-4xl">💵</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-3 text-balance">MANEJO DEL DINERO</h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  Procesos lógico-matemáticos, manejo del dinero y educación financiera
-                </p>
+                <h3 className="text-2xl font-bold mb-3 text-balance">Manejo del Dinero</h3>
+                <p className="text-muted-foreground leading-relaxed mb-4">Reconocimiento y manejo del dinero</p>
                 <p className="text-sm text-muted-foreground">6 actividades prácticas con dinero</p>
                 {moduleProgress["manejo-dinero"] > 0 && (
                   <div className="mt-4">
@@ -261,7 +258,7 @@ export default function SmartlogyPage() {
                 <div className="w-20 h-20 bg-green-400/20 rounded-full flex items-center justify-center mx-auto mb-4">
                   <span className="text-4xl">🏦</span>
                 </div>
-                <h3 className="text-2xl font-bold mb-3 text-balance">EDUCACIÓN FINANCIERA</h3>
+                <h3 className="text-2xl font-bold mb-3 text-balance">Educación Financiera</h3>
                 <p className="text-muted-foreground leading-relaxed mb-4">
                   Conceptos de ahorro y decisiones financieras
                 </p>

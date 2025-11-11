@@ -440,7 +440,7 @@ export default function ManejoDineroPage() {
 
             {feedback && (
               <div
-                className={`mt-6 p-4 rounded-lg flex items-center gap-3 ${
+                className={`mt-6 p-4 rounded-lg flex items-center gap-3 w-auto max-w-md mx-auto ${
                   feedback === "correct" ? "bg-green-100 text-green-800" : "bg-red-100 text-red-800"
                 }`}
               >

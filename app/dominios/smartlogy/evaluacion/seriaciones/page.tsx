@@ -323,7 +323,7 @@ export default function SeriacionesPage() {
 
             {ordenamientoFeedback && (
               <div
-                className={`mb-4 p-4 rounded-lg flex items-center gap-2 ${
+                className={`w-auto max-w-md mx-auto mb-4 p-4 rounded-lg flex items-center gap-2 ${
                   ordenamientoCompleted ? "bg-green-100 text-green-800" : "bg-yellow-100 text-yellow-800"
                 }`}
               >
@@ -427,7 +427,7 @@ export default function SeriacionesPage() {
 
             {injertoFeedback && (
               <div
-                className={`mb-4 p-4 rounded-lg flex items-center gap-2 ${
+                className={`w-auto max-w-md mx-auto mb-4 p-4 rounded-lg flex items-center gap-2 ${
                   injertoCompleted ? "bg-green-100 text-green-800" : "bg-yellow-100 text-yellow-800"
                 }`}
               >
@@ -476,7 +476,7 @@ export default function SeriacionesPage() {
 
             {correccionFeedback && (
               <div
-                className={`mb-4 p-4 rounded-lg flex items-center gap-2 ${
+                className={`w-auto max-w-md mx-auto mb-4 p-4 rounded-lg flex items-center gap-2 ${
                   correccionCompleted ? "bg-green-100 text-green-800" : "bg-yellow-100 text-yellow-800"
                 }`}
               >

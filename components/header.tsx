@@ -12,6 +12,9 @@ export function Header() {
   const pathname = usePathname()
   const isHomePage = pathname === "/"
 
+  const isCognicom = pathname?.includes("/cognicom")
+  const isSmartlogy = pathname?.includes("/smartlogy")
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id)
     if (element) {
@@ -32,9 +35,21 @@ export function Header() {
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
-            <Image src="/logo-logycom.png" alt="LOGyCOM" width={40} height={40} className="rounded-full" />
+            {isCognicom ? (
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-10-29%20at%209.59.37%20AM-cpDtn3mTMvUZF55FK2nisRp9yTh6vA.jpeg"
+                alt="COGNICOM"
+                width={40}
+                height={40}
+                className="rounded-full"
+              />
+            ) : isSmartlogy ? (
+              <Image src="/smartlogy-logo.png" alt="Smartlogy" width={40} height={40} className="rounded-full" />
+            ) : (
+              <Image src="/logo-logycom.png" alt="LOGyCOM" width={40} height={40} className="rounded-full" />
+            )}
             <span className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              LOGyCOM
+              {isCognicom ? "COGNICOM" : isSmartlogy ? "$MAR+L🪙GY" : "LOGyCOM"}
             </span>
           </Link>
 

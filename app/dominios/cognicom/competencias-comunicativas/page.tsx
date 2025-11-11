@@ -380,7 +380,7 @@ export default function CompetenciasComunicativasPage() {
 
                   {expositionResult && (
                     <div
-                      className={`p-3 md:p-4 rounded-lg flex items-center gap-3 text-sm md:text-base ${
+                      className={`p-3 md:p-4 rounded-lg flex items-center gap-3 text-sm md:text-base w-auto max-w-md mx-auto ${
                         expositionResult === "correct" ? "bg-green-50 text-green-900" : "bg-red-50 text-red-900"
                       }`}
                     >
@@ -451,7 +451,7 @@ export default function CompetenciasComunicativasPage() {
 
                   {expositionResult && (
                     <div
-                      className={`p-3 md:p-4 rounded-lg flex items-center gap-3 text-sm md:text-base ${
+                      className={`p-3 md:p-4 rounded-lg flex items-center gap-3 text-sm md:text-base w-auto max-w-md mx-auto ${
                         expositionResult === "correct" ? "bg-green-50 text-green-900" : "bg-red-50 text-red-900"
                       }`}
                     >
@@ -535,7 +535,7 @@ export default function CompetenciasComunicativasPage() {
 
                   {expositionResult && (
                     <div
-                      className={`p-3 md:p-4 rounded-lg flex items-center gap-3 text-sm md:text-base ${
+                      className={`p-3 md:p-4 rounded-lg flex items-center gap-3 text-sm md:text-base w-auto max-w-md mx-auto ${
                         expositionResult === "correct" ? "bg-green-50 text-green-900" : "bg-red-50 text-red-900"
                       }`}
                     >
@@ -703,7 +703,7 @@ export default function CompetenciasComunicativasPage() {
 
                   {wordListResult && (
                     <div
-                      className={`p-3 md:p-4 rounded-lg flex items-center gap-3 text-sm md:text-base ${
+                      className={`p-3 md:p-4 rounded-lg flex items-center gap-3 text-sm md:text-base w-auto max-w-md mx-auto ${
                         wordListResult === "correct" ? "bg-green-50 text-green-900" : "bg-red-50 text-red-900"
                       }`}
                     >
@@ -824,7 +824,7 @@ export default function CompetenciasComunicativasPage() {
 
                   {wordListResult && (
                     <div
-                      className={`p-3 md:p-4 rounded-lg flex items-center gap-3 text-sm md:text-base ${
+                      className={`p-3 md:p-4 rounded-lg flex items-center gap-3 text-sm md:text-base w-auto max-w-md mx-auto ${
                         wordListResult === "correct" ? "bg-green-50 text-green-900" : "bg-red-50 text-red-900"
                       }`}
                     >
@@ -965,7 +965,7 @@ export default function CompetenciasComunicativasPage() {
 
                   {wordListResult && (
                     <div
-                      className={`p-3 md:p-4 rounded-lg flex items-center gap-3 text-sm md:text-base ${
+                      className={`p-3 md:p-4 rounded-lg flex items-center gap-3 text-sm md:text-base w-auto max-w-md mx-auto ${
                         wordListResult === "correct" ? "bg-green-50 text-green-900" : "bg-red-50 text-red-900"
                       }`}
                     >
@@ -1087,7 +1087,7 @@ export default function CompetenciasComunicativasPage() {
 
                   {pragmaticResult && (
                     <div
-                      className={`p-3 md:p-4 rounded-lg flex items-center gap-3 text-sm md:text-base ${
+                      className={`p-3 md:p-4 rounded-lg flex items-center gap-3 text-sm md:text-base w-auto max-w-md mx-auto ${
                         pragmaticResult === "correct" ? "bg-green-50 text-green-900" : "bg-red-50 text-red-900"
                       }`}
                     >
@@ -1187,7 +1187,7 @@ export default function CompetenciasComunicativasPage() {
 
                   {pragmaticResult && (
                     <div
-                      className={`p-3 md:p-4 rounded-lg flex items-center gap-3 text-sm md:text-base ${
+                      className={`p-3 md:p-4 rounded-lg flex items-center gap-3 text-sm md:text-base w-auto max-w-md mx-auto ${
                         pragmaticResult === "correct" ? "bg-green-50 text-green-900" : "bg-red-50 text-red-900"
                       }`}
                     >
@@ -1279,7 +1279,7 @@ export default function CompetenciasComunicativasPage() {
 
                   {pragmaticResult && (
                     <div
-                      className={`p-3 md:p-4 rounded-lg flex items-center gap-3 text-sm md:text-base ${
+                      className={`p-3 md:p-4 rounded-lg flex items-center gap-3 text-sm md:text-base w-auto max-w-md mx-auto ${
                         pragmaticResult === "correct" ? "bg-green-50 text-green-900" : "bg-red-50 text-red-900"
                       }`}
                     >
@@ -1452,7 +1452,7 @@ export default function CompetenciasComunicativasPage() {
 
                   {proximicaResult && (
                     <div
-                      className={`p-3 md:p-4 rounded-lg flex items-center gap-3 text-sm md:text-base ${
+                      className={`p-3 md:p-4 rounded-lg flex items-center gap-3 text-sm md:text-base w-auto max-w-md mx-auto ${
                         proximicaResult === "correct" ? "bg-green-50 text-green-900" : "bg-red-50 text-red-900"
                       }`}
                     >
@@ -1679,7 +1679,7 @@ export default function CompetenciasComunicativasPage() {
 
                   {proximicaResult && (
                     <div
-                      className={`p-3 md:p-4 rounded-lg flex items-center gap-3 text-sm md:text-base ${
+                      className={`p-3 md:p-4 rounded-lg flex items-center gap-3 text-sm md:text-base w-auto max-w-md mx-auto ${
                         proximicaResult === "correct" ? "bg-green-50 text-green-900" : "bg-red-50 text-red-900"
                       }`}
                     >
@@ -1781,7 +1781,7 @@ export default function CompetenciasComunicativasPage() {
 
                   {proximicaResult && (
                     <div
-                      className={`p-3 md:p-4 rounded-lg flex items-center gap-3 text-sm md:text-base ${
+                      className={`p-3 md:p-4 rounded-lg flex items-center gap-3 text-sm md:text-base w-auto max-w-md mx-auto ${
                         proximicaResult === "correct" ? "bg-green-50 text-green-900" : "bg-red-50 text-red-900"
                       }`}
                     >

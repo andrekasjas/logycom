@@ -551,6 +551,19 @@ export default function PruebaDiagnosticaPage() {
         <section className="pt-32 pb-24 min-h-screen">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
+              <Button
+                variant="ghost"
+                className="mb-6 gap-2"
+                onClick={() => {
+                  setSelectedArea(null)
+                  setCurrentLevel(null)
+                  setShowResult(false)
+                }}
+              >
+                <ArrowLeft className="w-4 h-4" />
+                Volver
+              </Button>
+
               <div className="text-center mb-12">
                 <h2 className="text-3xl sm:text-4xl font-bold mb-4">Comprensión Oral - Nivel Básico</h2>
                 <p className="text-muted-foreground">Escucha la instrucción y completa la tarea</p>
@@ -636,7 +649,7 @@ export default function PruebaDiagnosticaPage() {
 
                 {showResult && (
                   <Card
-                    className={`p-6 ${isCorrect ? "bg-green-500/10 border-green-500" : "bg-red-500/10 border-red-500"}`}
+                    className={`p-6 w-auto max-w-md mx-auto ${isCorrect ? "bg-green-500/10 border-green-500" : "bg-red-500/10 border-red-500"}`}
                   >
                     <div className="flex items-center gap-4 mb-4">
                       {isCorrect ? (
@@ -685,6 +698,18 @@ export default function PruebaDiagnosticaPage() {
         <section className="pt-32 pb-24 min-h-screen">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
+              <Button
+                variant="ghost"
+                className="mb-6 gap-2"
+                onClick={() => {
+                  setCurrentLevel("basico")
+                  setShowResult(false)
+                }}
+              >
+                <ArrowLeft className="w-4 h-4" />
+                Volver
+              </Button>
+
               <div className="text-center mb-12">
                 <h2 className="text-3xl sm:text-4xl font-bold mb-4">Comprensión Oral - Nivel Intermedio</h2>
                 <p className="text-muted-foreground">Escucha el mensaje y responde la pregunta</p>
@@ -750,7 +775,7 @@ export default function PruebaDiagnosticaPage() {
 
                 {showResult && (
                   <Card
-                    className={`p-6 ${isCorrect ? "bg-green-500/10 border-green-500" : "bg-red-500/10 border-red-500"}`}
+                    className={`p-6 w-auto max-w-md mx-auto ${isCorrect ? "bg-green-500/10 border-green-500" : "bg-red-500/10 border-red-500"}`}
                   >
                     <div className="flex items-center gap-4 mb-4">
                       {isCorrect ? (
@@ -806,6 +831,18 @@ Ricardo (aliviado): Perfecto, Julia ¡diez minutos! Le diré a Pedro que baja ya
         <section className="pt-32 pb-24 min-h-screen">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
+              <Button
+                variant="ghost"
+                className="mb-6 gap-2"
+                onClick={() => {
+                  setCurrentLevel("intermedio")
+                  setShowResult(false)
+                }}
+              >
+                <ArrowLeft className="w-4 h-4" />
+                Volver
+              </Button>
+
               <div className="text-center mb-12">
                 <h2 className="text-3xl sm:text-4xl font-bold mb-4">Comprensión Oral - Nivel Avanzado</h2>
                 <p className="text-muted-foreground">Escucha el diálogo telefónico y responde las preguntas</p>
@@ -941,7 +978,7 @@ Ricardo (aliviado): Perfecto, Julia ¡diez minutos! Le diré a Pedro que baja ya
 
                 {showResult && (
                   <Card
-                    className={`p-6 ${isCorrect ? "bg-green-500/10 border-green-500" : "bg-red-500/10 border-red-500"}`}
+                    className={`p-6 w-auto max-w-md mx-auto ${isCorrect ? "bg-green-500/10 border-green-500" : "bg-red-500/10 border-red-500"}`}
                   >
                     <div className="flex items-center gap-4 mb-4">
                       {isCorrect ? (
@@ -993,6 +1030,19 @@ Ricardo (aliviado): Perfecto, Julia ¡diez minutos! Le diré a Pedro que baja ya
         <section className="pt-32 pb-24 min-h-screen">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
+              <Button
+                variant="ghost"
+                className="mb-6 gap-2"
+                onClick={() => {
+                  setSelectedArea(null)
+                  setCurrentLevel(null)
+                  setShowResult(false)
+                }}
+              >
+                <ArrowLeft className="w-4 h-4" />
+                Volver
+              </Button>
+
               <div className="text-center mb-12">
                 <h2 className="text-3xl sm:text-4xl font-bold mb-4">Lectura - Nivel Básico</h2>
                 <p className="text-muted-foreground">Observa la señal e indica su significado</p>
@@ -1041,7 +1091,7 @@ Ricardo (aliviado): Perfecto, Julia ¡diez minutos! Le diré a Pedro que baja ya
 
                 {showResult && (
                   <Card
-                    className={`p-6 ${isCorrect ? "bg-green-500/10 border-green-500" : "bg-red-500/10 border-red-500"}`}
+                    className={`p-6 w-auto max-w-md mx-auto ${isCorrect ? "bg-green-500/10 border-green-500" : "bg-red-500/10 border-red-500"}`}
                   >
                     <div className="flex items-center gap-4 mb-4">
                       {isCorrect ? (
@@ -1108,6 +1158,18 @@ Te esperamos.`
         <section className="pt-32 pb-24 min-h-screen">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
+              <Button
+                variant="ghost"
+                className="mb-6 gap-2"
+                onClick={() => {
+                  setCurrentLevel("basico")
+                  setShowResult(false)
+                }}
+              >
+                <ArrowLeft className="w-4 h-4" />
+                Volver
+              </Button>
+
               <div className="text-center mb-12">
                 <h2 className="text-3xl sm:text-4xl font-bold mb-4">Lectura - Nivel Intermedio</h2>
                 <p className="text-muted-foreground">Lee el aviso y responde las preguntas</p>
@@ -1285,7 +1347,7 @@ Te esperamos.`
 
                 {showResult && (
                   <Card
-                    className={`p-6 ${isCorrect ? "bg-green-500/10 border-green-500" : "bg-red-500/10 border-red-500"}`}
+                    className={`p-6 w-auto max-w-md mx-auto ${isCorrect ? "bg-green-500/10 border-green-500" : "bg-red-500/10 border-red-500"}`}
                   >
                     <div className="flex items-center gap-4 mb-4">
                       {isCorrect ? (
@@ -1339,6 +1401,18 @@ Para ser más puntuales, podemos usar alarmas, preparar nuestras cosas la noche 
         <section className="pt-32 pb-24 min-h-screen">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
+              <Button
+                variant="ghost"
+                className="mb-6 gap-2"
+                onClick={() => {
+                  setCurrentLevel("intermedio")
+                  setShowResult(false)
+                }}
+              >
+                <ArrowLeft className="w-4 h-4" />
+                Volver
+              </Button>
+
               <div className="text-center mb-12">
                 <h2 className="text-3xl sm:text-4xl font-bold mb-4">Lectura - Nivel Avanzado</h2>
                 <p className="text-muted-foreground">Lee el artículo y responde las preguntas</p>
@@ -1448,7 +1522,7 @@ Para ser más puntuales, podemos usar alarmas, preparar nuestras cosas la noche 
 
                 {showResult && (
                   <Card
-                    className={`p-6 ${isCorrect ? "bg-green-500/10 border-green-500" : "bg-red-500/10 border-red-500"}`}
+                    className={`p-6 w-auto max-w-md mx-auto ${isCorrect ? "bg-green-500/10 border-green-500" : "bg-red-500/10 border-red-500"}`}
                   >
                     <div className="flex items-center gap-4 mb-4">
                       {isCorrect ? (
@@ -1498,6 +1572,19 @@ Para ser más puntuales, podemos usar alarmas, preparar nuestras cosas la noche 
         <section className="pt-32 pb-24 min-h-screen">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
+              <Button
+                variant="ghost"
+                className="mb-6 gap-2"
+                onClick={() => {
+                  setSelectedArea(null)
+                  setCurrentLevel(null)
+                  setShowResult(false)
+                }}
+              >
+                <ArrowLeft className="w-4 h-4" />
+                Volver
+              </Button>
+
               <div className="text-center mb-12">
                 <h2 className="text-3xl sm:text-4xl font-bold mb-4">Escritura - Nivel Básico</h2>
                 <p className="text-muted-foreground">Escribe una lista de 3-4 ítems</p>
@@ -1572,7 +1659,7 @@ Para ser más puntuales, podemos usar alarmas, preparar nuestras cosas la noche 
 
                 {showResult && (
                   <Card
-                    className={`p-6 ${isCorrect ? "bg-green-500/10 border-green-500" : "bg-red-500/10 border-red-500"}`}
+                    className={`p-6 w-auto max-w-md mx-auto ${isCorrect ? "bg-green-500/10 border-green-500" : "bg-red-500/10 border-red-500"}`}
                   >
                     <div className="flex items-center gap-4 mb-4">
                       {isCorrect ? (
@@ -1618,6 +1705,18 @@ Para ser más puntuales, podemos usar alarmas, preparar nuestras cosas la noche 
         <section className="pt-32 pb-24 min-h-screen">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
+              <Button
+                variant="ghost"
+                className="mb-6 gap-2"
+                onClick={() => {
+                  setCurrentLevel("basico")
+                  setShowResult(false)
+                }}
+              >
+                <ArrowLeft className="w-4 h-4" />
+                Volver
+              </Button>
+
               <div className="text-center mb-12">
                 <h2 className="text-3xl sm:text-4xl font-bold mb-4">Escritura - Nivel Intermedio</h2>
                 <p className="text-muted-foreground">Escribe un mensaje pidiendo ayuda</p>
@@ -1696,7 +1795,7 @@ Para ser más puntuales, podemos usar alarmas, preparar nuestras cosas la noche 
 
                 {showResult && (
                   <Card
-                    className={`p-6 ${isCorrect ? "bg-green-500/10 border-green-500" : "bg-red-500/10 border-red-500"}`}
+                    className={`p-6 w-auto max-w-md mx-auto ${isCorrect ? "bg-green-500/10 border-green-500" : "bg-red-500/10 border-red-500"}`}
                   >
                     <div className="flex items-center gap-4 mb-4">
                       {isCorrect ? (
@@ -1742,6 +1841,18 @@ Para ser más puntuales, podemos usar alarmas, preparar nuestras cosas la noche 
         <section className="pt-32 pb-24 min-h-screen">
           <div className="container mx-auto px-6">
             <div className="max-w-4xl mx-auto">
+              <Button
+                variant="ghost"
+                className="mb-6 gap-2"
+                onClick={() => {
+                  setCurrentLevel("intermedio")
+                  setShowResult(false)
+                }}
+              >
+                <ArrowLeft className="w-4 h-4" />
+                Volver
+              </Button>
+
               <div className="text-center mb-12">
                 <h2 className="text-3xl sm:text-4xl font-bold mb-4">Escritura - Nivel Avanzado</h2>
                 <p className="text-muted-foreground">Escribe un párrafo argumentativo</p>
@@ -1824,7 +1935,7 @@ Para ser más puntuales, podemos usar alarmas, preparar nuestras cosas la noche 
 
                 {showResult && (
                   <Card
-                    className={`p-6 ${isCorrect ? "bg-green-500/10 border-green-500" : "bg-red-500/10 border-red-500"}`}
+                    className={`p-6 w-auto max-w-md mx-auto ${isCorrect ? "bg-green-500/10 border-green-500" : "bg-red-500/10 border-red-500"}`}
                   >
                     <div className="flex items-center gap-4 mb-4">
                       {isCorrect ? (

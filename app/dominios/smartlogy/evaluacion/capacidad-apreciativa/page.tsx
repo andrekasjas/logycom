@@ -89,10 +89,10 @@ export default function CapacidadApreciativaPage() {
 
       // Mark as complete
       setTimeout(() => {
-        const completed = JSON.parse(localStorage.getItem("smartlogyCompletedActivities") || "[]")
-        if (!completed.includes("capacidad-apreciativa")) {
-          completed.push("capacidad-apreciativa")
-          localStorage.setItem("smartlogyCompletedActivities", JSON.stringify(completed))
+        const completedActivities = JSON.parse(localStorage.getItem("smartlogyCompletedActivities") || "[]")
+        if (!completedActivities.includes("capacidad-apreciativa")) {
+          completedActivities.push("capacidad-apreciativa")
+          localStorage.setItem("smartlogyCompletedActivities", JSON.stringify(completedActivities))
         }
       }, 2000)
     } else {
@@ -188,7 +188,7 @@ export default function CapacidadApreciativaPage() {
 
           {feedback && (
             <div
-              className={`p-4 rounded-lg flex items-center gap-2 ${
+              className={`w-auto max-w-md mx-auto p-4 rounded-lg flex items-center gap-2 ${
                 completed && sequences.every((seq) => selectedOptions[seq.id] === seq.correctOption)
                   ? "bg-green-100 text-green-800"
                   : "bg-blue-100 text-blue-800"

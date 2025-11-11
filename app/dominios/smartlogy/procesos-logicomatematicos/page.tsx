@@ -164,6 +164,14 @@ export default function ProcesosLogicomatematicosPage() {
             Volver
           </Button>
 
+          <Button
+            variant="outline"
+            className="mb-6 md:mb-8 gap-2 ml-2 bg-transparent"
+            onClick={() => (window.location.href = "/")}
+          >
+            Volver a inicio
+          </Button>
+
           <div className="text-center mb-12 md:mb-16">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 text-balance">
               Procesos Lógico Matemáticos

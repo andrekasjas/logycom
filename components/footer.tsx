@@ -10,8 +10,8 @@ export function Footer() {
               LOGyCOM
             </h3>
             <p className="text-muted-foreground text-sm leading-relaxed">
-              Transformamos ideas en soluciones tecnológicas que impulsan la inclusión social y laboral de personas con
-              discapacidad
+              Plataforma educativa innovadora con dominios COGNICOM y $MAR+L🪙GY dedicada a la inclusión social y
+              laboral de personas con discapacidad
             </p>
           </div>
 
@@ -28,11 +28,6 @@ export function Footer() {
                   Dominios
                 </a>
               </li>
-              <li>
-                <a href="#educacion" className="hover:text-primary transition-colors">
-                  Educación
-                </a>
-              </li>
             </ul>
           </div>
 
@@ -40,7 +35,7 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Contacto</h4>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>logycomsas@gmail.com</li>
-              <li>Bucaramanga, Colombia</li>
+              <li>Cúcuta, Colombia</li>
             </ul>
           </div>
 

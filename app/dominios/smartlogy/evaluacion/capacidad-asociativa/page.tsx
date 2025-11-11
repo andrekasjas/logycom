@@ -185,7 +185,7 @@ export default function CapacidadAsociativaPage() {
 
           {feedback && (
             <div
-              className={`p-4 rounded-lg flex items-center gap-2 ${
+              className={`w-auto max-w-md mx-auto p-4 rounded-lg flex items-center gap-2 ${
                 completed ? "bg-green-100 text-green-800" : "bg-blue-100 text-blue-800"
               }`}
             >

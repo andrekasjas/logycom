@@ -11,9 +11,9 @@ export function Hero() {
             LOGyCOM
           </h1>
           <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-foreground/90 animate-fade-in text-balance">
-            7 Discapacidades Unidas por la Comunicación
+            Discapacidades Unidas por la Comunicación
           </h2>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in-up leading-relaxed">
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in-up leading-relaxed text-justify">
             Transformamos ideas en soluciones tecnológicas que impulsan la inclusión social y laboral de personas con
             discapacidad
           </p>

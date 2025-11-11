@@ -7,23 +7,10 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import {
-  Volume2,
-  CheckCircle2,
-  XCircle,
-  HelpCircle,
-  ArrowLeft,
-  Music,
-  BookOpen,
-  MessageCircle,
-  Mic,
-  MicOff,
-} from "lucide-react"
+import { Volume2, CheckCircle2, XCircle, HelpCircle, ArrowLeft, Music, MessageCircle } from "lucide-react"
 
 export default function HabilidadesComunicativasPage() {
-  const [selectedActivity, setSelectedActivity] = useState<
-    "escucha" | "habla" | "lectoescritura" | "conversacional" | null
-  >(null)
+  const [selectedActivity, setSelectedActivity] = useState<"escucha" | "habla" | null>(null)
   const [currentLevel, setCurrentLevel] = useState(1)
   const [completedLevels, setCompletedLevels] = useState<number[]>([])
 
@@ -556,32 +543,6 @@ export default function HabilidadesComunicativasPage() {
               </div>
               <p className="text-muted-foreground">Mejora tu expresión oral y comunicación</p>
             </Card>
-
-            <Card
-              className="p-8 hover:shadow-lg transition-shadow cursor-pointer"
-              onClick={() => setSelectedActivity("lectoescritura")}
-            >
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <BookOpen className="w-6 h-6 text-primary" />
-                </div>
-                <h2 className="text-2xl font-bold">Lecto Escritura</h2>
-              </div>
-              <p className="text-muted-foreground">Practica lectura y escritura de forma interactiva</p>
-            </Card>
-
-            <Card
-              className="p-8 hover:shadow-lg transition-shadow cursor-pointer"
-              onClick={() => setSelectedActivity("conversacional")}
-            >
-              <div className="flex items-center gap-4 mb-4">
-                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
-                  <Music className="w-6 h-6 text-primary" />
-                </div>
-                <h2 className="text-2xl font-bold">Conversacional</h2>
-              </div>
-              <p className="text-muted-foreground">Desarrolla habilidades de conversación práctica</p>
-            </Card>
           </div>
         </div>
         <Footer />
@@ -642,7 +603,7 @@ export default function HabilidadesComunicativasPage() {
                 </Button>
 
                 {escuchaResult === "correct" && (
-                  <div className="flex items-center gap-2 text-green-600">
+                  <div className="flex items-center gap-2 text-green-600 w-auto max-w-md mx-auto bg-green-50 p-4 rounded-lg">
                     <CheckCircle2 className="w-5 h-5" />
                     <span>¡Correcto! Pasando al siguiente nivel...</span>
                   </div>
@@ -702,7 +663,7 @@ export default function HabilidadesComunicativasPage() {
                 </Button>
 
                 {escuchaResult === "correct" && (
-                  <div className="flex items-center gap-2 text-green-600">
+                  <div className="flex items-center gap-2 text-green-600 w-auto max-w-md mx-auto bg-green-50 p-4 rounded-lg">
                     <CheckCircle2 className="w-5 h-5" />
                     <span>¡Correcto! Pasando al siguiente nivel...</span>
                   </div>
@@ -761,7 +722,7 @@ export default function HabilidadesComunicativasPage() {
                 </Button>
 
                 {escuchaResult === "correct" && (
-                  <div className="flex items-center gap-2 text-green-600">
+                  <div className="flex items-center gap-2 text-green-600 w-auto max-w-md mx-auto bg-green-50 p-4 rounded-lg">
                     <CheckCircle2 className="w-5 h-5" />
                     <span>¡Excelente! Has completado Escucha Activa</span>
                   </div>
@@ -846,7 +807,7 @@ export default function HabilidadesComunicativasPage() {
                 </Button>
 
                 {hablaResult === "correct" && (
-                  <div className="flex items-center gap-2 text-green-600">
+                  <div className="flex items-center gap-2 text-green-600 w-auto max-w-md mx-auto bg-green-50 p-4 rounded-lg">
                     <CheckCircle2 className="w-5 h-5" />
                     <span>¡Correcto! Pasando al siguiente nivel...</span>
                   </div>
@@ -906,7 +867,7 @@ export default function HabilidadesComunicativasPage() {
                 </Button>
 
                 {hablaResult === "correct" && (
-                  <div className="flex items-center gap-2 text-green-600">
+                  <div className="flex items-center gap-2 text-green-600 w-auto max-w-md mx-auto bg-green-50 p-4 rounded-lg">
                     <CheckCircle2 className="w-5 h-5" />
                     <span>¡Correcto! Pasando al siguiente nivel...</span>
                   </div>
@@ -979,7 +940,7 @@ export default function HabilidadesComunicativasPage() {
                 </Button>
 
                 {hablaResult === "correct" && (
-                  <div className="flex items-center gap-2 text-green-600">
+                  <div className="flex items-center gap-2 text-green-600 w-auto max-w-md mx-auto bg-green-50 p-4 rounded-lg">
                     <CheckCircle2 className="w-5 h-5" />
                     <span>¡Excelente! Has completado Habla</span>
                   </div>
@@ -1000,507 +961,9 @@ export default function HabilidadesComunicativasPage() {
     )
   }
 
-  if (selectedActivity === "lectoescritura") {
-    return (
-      <div className="min-h-screen">
-        <Header />
-        <div className="container mx-auto px-6 py-24">
-          <Button variant="ghost" className="mb-6" onClick={() => setSelectedActivity(null)}>
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Volver
-          </Button>
-
-          <h1 className="text-4xl font-bold mb-8 text-center">Lecto Escritura - Nivel {currentLevel}</h1>
-
-          {currentLevel === 1 && (
-            <Card className="p-8 max-w-2xl mx-auto">
-              <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-bold">Ordenar el Texto</h2>
-                <Button variant="ghost" size="icon" onClick={() => setShowLectoHelp(!showLectoHelp)}>
-                  <HelpCircle className="w-5 h-5" />
-                </Button>
-              </div>
-
-              {showLectoHelp && (
-                <div className="mb-6 p-4 bg-accent/10 rounded-lg">
-                  <p className="text-sm">
-                    <strong>Ayuda:</strong> La respuesta correcta es: "{sentences[currentSentenceIndex].correct}"
-                  </p>
-                </div>
-              )}
-
-              <div className="space-y-6">
-                <p className="text-muted-foreground">
-                  Oración {currentSentenceIndex + 1} de {sentences.length}
-                </p>
-
-                <div>
-                  <p className="text-sm font-medium mb-2">Palabras disponibles:</p>
-                  <div className="flex flex-wrap gap-2 p-4 bg-secondary/30 rounded-lg min-h-[60px]">
-                    {shuffledWords.map((word, index) => (
-                      <Button key={index} variant="outline" onClick={() => addWordToPhrase(word)}>
-                        {word}
-                      </Button>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <p className="text-sm font-medium mb-2">Tu oración:</p>
-                  <div className="flex flex-wrap gap-2 p-4 bg-primary/10 rounded-lg min-h-[60px]">
-                    {orderedPhrase.map((word, index) => (
-                      <Button key={index} variant="default" onClick={() => removeWordFromPhrase(index)}>
-                        {word}
-                      </Button>
-                    ))}
-                  </div>
-                </div>
-
-                <Button onClick={checkOrdenarTexto} className="w-full">
-                  Verificar Oración
-                </Button>
-
-                {lectoResult === "correct" && (
-                  <div className="flex items-center gap-2 text-green-600">
-                    <CheckCircle2 className="w-5 h-5" />
-                    <span>
-                      {currentSentenceIndex < sentences.length - 1
-                        ? "¡Correcto! Siguiente oración..."
-                        : "¡Excelente! Pasando al siguiente nivel..."}
-                    </span>
-                  </div>
-                )}
-
-                {lectoResult === "incorrect" && (
-                  <div className="flex items-center gap-2 text-red-600">
-                    <XCircle className="w-5 h-5" />
-                    <span>El orden no es correcto, intenta de nuevo</span>
-                  </div>
-                )}
-              </div>
-            </Card>
-          )}
-
-          {currentLevel === 2 && (
-            <Card className="p-8 max-w-2xl mx-auto">
-              <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-bold">Ordenar Frases Desordenadas</h2>
-                <Button variant="ghost" size="icon" onClick={() => setShowLectoHelp(!showLectoHelp)}>
-                  <HelpCircle className="w-5 h-5" />
-                </Button>
-              </div>
-
-              {showLectoHelp && (
-                <div className="mb-6 p-4 bg-accent/10 rounded-lg">
-                  <p className="text-sm">
-                    <strong>Ayuda:</strong> La respuesta correcta es: "{phrases[currentPhraseIndex].correct}"
-                  </p>
-                </div>
-              )}
-
-              <div className="space-y-6">
-                <p className="text-muted-foreground">
-                  Frase {currentPhraseIndex + 1} de {phrases.length}
-                </p>
-
-                <div>
-                  <p className="text-sm font-medium mb-2">Palabras disponibles:</p>
-                  <div className="flex flex-wrap gap-2 p-4 bg-secondary/30 rounded-lg min-h-[60px]">
-                    {shuffledPhraseWords.map((word, index) => (
-                      <Button key={index} variant="outline" onClick={() => addWordToPhraseLevel2(word)}>
-                        {word}
-                      </Button>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <p className="text-sm font-medium mb-2">Tu frase:</p>
-                  <div className="flex flex-wrap gap-2 p-4 bg-primary/10 rounded-lg min-h-[60px]">
-                    {orderedPhraseWords.map((word, index) => (
-                      <Button key={index} variant="default" onClick={() => removeWordFromPhraseLevel2(index)}>
-                        {word}
-                      </Button>
-                    ))}
-                  </div>
-                </div>
-
-                <Button onClick={checkOrdenarFrases} className="w-full">
-                  Verificar Frase
-                </Button>
-
-                {lectoResult === "correct" && (
-                  <div className="flex items-center gap-2 text-green-600">
-                    <CheckCircle2 className="w-5 h-5" />
-                    <span>
-                      {currentPhraseIndex < phrases.length - 1
-                        ? "¡Correcto! Siguiente frase..."
-                        : "¡Excelente! Pasando al siguiente nivel..."}
-                    </span>
-                  </div>
-                )}
-
-                {lectoResult === "incorrect" && (
-                  <div className="flex items-center gap-2 text-red-600">
-                    <XCircle className="w-5 h-5" />
-                    <span>El orden no es correcto, intenta de nuevo</span>
-                  </div>
-                )}
-              </div>
-            </Card>
-          )}
-
-          {currentLevel === 3 && (
-            <Card className="p-8 max-w-3xl mx-auto">
-              <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-bold">Completar el Texto</h2>
-                <Button variant="ghost" size="icon" onClick={() => setShowLectoHelp(!showLectoHelp)}>
-                  <HelpCircle className="w-5 h-5" />
-                </Button>
-              </div>
-
-              {showLectoHelp && (
-                <div className="mb-6 p-4 bg-accent/10 rounded-lg">
-                  <p className="text-sm">
-                    <strong>Ayuda:</strong> Usa las palabras de las categorías de arriba para completar los espacios en
-                    blanco. Cada categoría tiene palabras específicas que encajan en el contexto.
-                  </p>
-                </div>
-              )}
-
-              <div className="space-y-6">
-                <div>
-                  <p className="text-sm font-medium mb-3">Categorías de palabras:</p>
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-                    {clozeText.categories.map((category) => (
-                      <div key={category} className="p-3 bg-secondary/30 rounded-lg">
-                        <p className="text-xs font-bold mb-2 capitalize">{category}</p>
-                        <div className="flex flex-wrap gap-1">
-                          {clozeText.words[category as keyof typeof clozeText.words].map((word, index) => (
-                            <span key={index} className="text-xs bg-primary/10 px-2 py-1 rounded">
-                              {word}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  {clozeText.story.map((paragraph, pIndex) => {
-                    const parts = paragraph.split(/(_____)/g)
-                    let blankIndex = 0
-                    return (
-                      <div key={pIndex} className="p-4 bg-secondary/10 rounded-lg">
-                        <p className="text-sm leading-relaxed">
-                          {parts.map((part, partIndex) => {
-                            if (part === "_____") {
-                              const currentBlankIndex = blankIndex++
-                              const inputKey = `${pIndex}-${currentBlankIndex}`
-                              return (
-                                <input
-                                  key={partIndex}
-                                  type="text"
-                                  value={clozeInputs[inputKey] || ""}
-                                  onChange={(e) => setClozeInputs({ ...clozeInputs, [inputKey]: e.target.value })}
-                                  className="inline-block w-24 px-2 py-1 mx-1 border-b-2 border-primary bg-transparent text-center"
-                                  placeholder="..."
-                                />
-                              )
-                            }
-                            return <span key={partIndex}>{part}</span>
-                          })}
-                        </p>
-                      </div>
-                    )
-                  })}
-                </div>
-
-                <Button onClick={checkCompletarTexto} className="w-full">
-                  Verificar Texto
-                </Button>
-
-                {lectoResult === "correct" && (
-                  <div className="flex items-center gap-2 text-green-600">
-                    <CheckCircle2 className="w-5 h-5" />
-                    <span>¡Excelente! Has completado Lecto Escritura</span>
-                  </div>
-                )}
-
-                {lectoResult === "incorrect" && (
-                  <div className="flex items-center gap-2 text-red-600">
-                    <XCircle className="w-5 h-5" />
-                    <span>Completa al menos 15 espacios en blanco</span>
-                  </div>
-                )}
-              </div>
-            </Card>
-          )}
-        </div>
-        <Footer />
-      </div>
-    )
-  }
-
-  if (selectedActivity === "conversacional") {
-    return (
-      <div className="min-h-screen">
-        <Header />
-        <div className="container mx-auto px-6 py-24">
-          <Button variant="ghost" className="mb-6" onClick={() => setSelectedActivity(null)}>
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Volver
-          </Button>
-
-          <h1 className="text-4xl font-bold mb-8 text-center">Conversacional - Nivel {currentLevel}</h1>
-
-          {currentLevel === 1 && (
-            <Card className="p-8 max-w-2xl mx-auto">
-              <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-bold">Dinámica de la Isla Desierta</h2>
-                <Button variant="ghost" size="icon" onClick={() => setShowConversacionalHelp(!showConversacionalHelp)}>
-                  <HelpCircle className="w-5 h-5" />
-                </Button>
-              </div>
-
-              {showConversacionalHelp && (
-                <div className="mb-6 p-4 bg-accent/10 rounded-lg">
-                  <p className="text-sm">
-                    <strong>Ayuda:</strong> Piensa en qué objetos serían más útiles para sobrevivir en una isla
-                    desierta. Considera necesidades básicas como agua, refugio, señalización y protección.
-                  </p>
-                </div>
-              )}
-
-              <div className="space-y-6">
-                <p className="text-muted-foreground">
-                  Imagina que vas a una isla desierta. Selecciona 5 objetos que llevarías contigo:
-                </p>
-
-                <div className="grid grid-cols-2 gap-3">
-                  {islandObjects.map((obj) => (
-                    <Button
-                      key={obj}
-                      variant={selectedIslandObjects.includes(obj) ? "default" : "outline"}
-                      className="h-auto py-4"
-                      onClick={() => toggleIslandObject(obj)}
-                      disabled={!selectedIslandObjects.includes(obj) && selectedIslandObjects.length >= 5}
-                    >
-                      {obj}
-                    </Button>
-                  ))}
-                </div>
-
-                <p className="text-sm text-muted-foreground">
-                  Objetos seleccionados: {selectedIslandObjects.length} / 5
-                </p>
-
-                <Button onClick={checkIslaDesierta} className="w-full">
-                  Confirmar Selección
-                </Button>
-
-                {conversacionalResult === "correct" && (
-                  <div className="flex items-center gap-2 text-green-600">
-                    <CheckCircle2 className="w-5 h-5" />
-                    <span>¡Excelente selección! Pasando al siguiente nivel...</span>
-                  </div>
-                )}
-
-                {conversacionalResult === "incorrect" && (
-                  <div className="flex items-center gap-2 text-red-600">
-                    <XCircle className="w-5 h-5" />
-                    <span>Debes seleccionar exactamente 5 objetos</span>
-                  </div>
-                )}
-              </div>
-            </Card>
-          )}
-
-          {currentLevel === 2 && (
-            <Card className="p-8">
-              <div className="flex items-center justify-between mb-6">
-                <h2 className="text-2xl font-bold">Redactar para Vender</h2>
-                <Button
-                  variant="outline"
-                  size="icon"
-                  onClick={() => setShowConversacionalHelp(!showConversacionalHelp)}
-                >
-                  <HelpCircle className="w-5 h-5" />
-                </Button>
-              </div>
-
-              {showConversacionalHelp && (
-                <div className="bg-accent/10 border border-accent/30 rounded-lg p-4 mb-6">
-                  <p className="text-sm font-semibold mb-2">Instrucción:</p>
-                  <p className="text-sm mb-3">
-                    Graba tu voz diciendo una frase persuasiva para vender un producto. El texto grabado aparecerá
-                    automáticamente en el área de texto. Puedes editar el texto si es necesario. El bot puede repetir
-                    opcionalmente.
-                  </p>
-                </div>
-              )}
-
-              <div className="space-y-6">
-                <div className="space-y-3">
-                  <label className="block text-sm font-semibold">Controles de Grabación:</label>
-                  <div className="flex gap-2">
-                    {isRecording ? (
-                      <Button className="flex-1 gap-2" variant="destructive" onClick={stopRecording}>
-                        <MicOff className="w-4 h-4" />
-                        Detener Grabación
-                      </Button>
-                    ) : (
-                      <Button className="flex-1 gap-2" onClick={startRecording}>
-                        <Mic className="w-4 h-4" />
-                        Iniciar Grabación
-                      </Button>
-                    )}
-                  </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-semibold mb-2">Edita tu texto (opcional):</label>
-                  <textarea
-                    value={salesParagraph}
-                    onChange={(e) => setSalesParagraph(e.target.value)}
-                    placeholder="Tu texto de venta aparecerá aquí automáticamente después de grabar. Puedes editarlo si lo deseas..."
-                    className="w-full px-4 py-3 border rounded-lg bg-background min-h-24"
-                  />
-                </div>
-
-                <div className="flex items-center gap-3 bg-secondary/50 p-4 rounded-lg">
-                  <input
-                    type="checkbox"
-                    id="botRepeat"
-                    checked={enableBotRepeat}
-                    onChange={(e) => setEnableBotRepeat(e.target.checked)}
-                    className="w-4 h-4 rounded cursor-pointer"
-                  />
-                  <label htmlFor="botRepeat" className="text-sm font-semibold cursor-pointer flex-1">
-                    Deseo que el bot repita mi texto
-                  </label>
-                </div>
-
-                {enableBotRepeat && salesParagraph && (
-                  <Button
-                    variant="outline"
-                    className="w-full gap-2 bg-transparent"
-                    onClick={() => playAudio(salesParagraph)}
-                  >
-                    <Volume2 className="w-4 h-4" />
-                    Escuchar mi texto (Bot)
-                  </Button>
-                )}
-
-                <Button
-                  className="w-full"
-                  onClick={() => {
-                    if (salesParagraph.length > 10) {
-                      setConversacionalResult("correct")
-                      saveProgress(32)
-                      setTimeout(() => {
-                        setCurrentLevel(3)
-                        setSalesParagraph("")
-                        setConversacionalResult(null)
-                        setEnableBotRepeat(false)
-                      }, 2000)
-                    } else {
-                      setConversacionalResult("incorrect")
-                    }
-                  }}
-                >
-                  Continuar
-                </Button>
-
-                {conversacionalResult && (
-                  <div
-                    className={`p-4 rounded-lg flex items-center gap-3 ${
-                      conversacionalResult === "correct" ? "bg-green-50 text-green-900" : "bg-red-50 text-red-900"
-                    }`}
-                  >
-                    {conversacionalResult === "correct" ? (
-                      <CheckCircle2 className="w-5 h-5 flex-shrink-0" />
-                    ) : (
-                      <XCircle className="w-5 h-5 flex-shrink-0" />
-                    )}
-                    <span>
-                      {conversacionalResult === "correct"
-                        ? "¡Excelente! Procede al siguiente nivel."
-                        : "Por favor, escribe o graba un texto más largo."}
-                    </span>
-                  </div>
-                )}
-              </div>
-            </Card>
-          )}
-
-          {currentLevel === 3 && (
-            <Card className="p-8 max-w-2xl mx-auto">
-              <div className="flex justify-between items-center mb-6">
-                <h2 className="text-2xl font-bold">La Entrevista</h2>
-                <Button variant="ghost" size="icon" onClick={() => setShowConversacionalHelp(!showConversacionalHelp)}>
-                  <HelpCircle className="w-5 h-5" />
-                </Button>
-              </div>
-
-              {showConversacionalHelp && (
-                <div className="mb-6 p-4 bg-accent/10 rounded-lg">
-                  <p className="text-sm">
-                    <strong>Ayuda:</strong> Imagina que estás entrevistando a un familiar sobre sus preferencias de
-                    vacaciones. Escribe respuestas detalladas (al menos 10 caracteres cada una) para cada pregunta.
-                  </p>
-                </div>
-              )}
-
-              <div className="space-y-6">
-                <p className="text-muted-foreground">
-                  Entrevista a un familiar sobre sus preferencias de vacaciones. Responde las siguientes preguntas:
-                </p>
-
-                {interviewQuestions.map((question, index) => (
-                  <div key={index}>
-                    <label className="block text-sm font-medium mb-2">
-                      {index + 1}. {question}
-                    </label>
-                    <textarea
-                      value={interviewAnswers[index]}
-                      onChange={(e) => {
-                        const updated = [...interviewAnswers]
-                        updated[index] = e.target.value
-                        setInterviewAnswers(updated)
-                      }}
-                      className="w-full p-3 border rounded-lg min-h-[80px]"
-                      placeholder="Escribe la respuesta..."
-                    />
-                  </div>
-                ))}
-
-                <Button onClick={checkEntrevista} className="w-full">
-                  Completar Entrevista
-                </Button>
-
-                {conversacionalResult === "correct" && (
-                  <div className="flex items-center gap-2 text-green-600">
-                    <CheckCircle2 className="w-5 h-5" />
-                    <span>¡Excelente! Has completado Conversacional</span>
-                  </div>
-                )}
-
-                {conversacionalResult === "incorrect" && (
-                  <div className="flex items-center gap-2 text-red-600">
-                    <XCircle className="w-5 h-5" />
-                    <span>Debes responder las 5 preguntas con al menos 10 caracteres cada una</span>
-                  </div>
-                )}
-              </div>
-            </Card>
-          )}
-        </div>
-        <Footer />
-      </div>
-    )
-  }
+  // Removed Lecto Escritura and Conversacional sections
+  // if (selectedActivity === "lectoescritura") { ... }
+  // if (selectedActivity === "conversacional") { ... }
 
   return null
 }
