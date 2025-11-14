@@ -5,9 +5,9 @@ import type React from "react"
 import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
-import { CheckCircle2, XCircle, ArrowLeft, RotateCcw } from "lucide-react"
+import { CheckCircle2, XCircle, ArrowLeft, RotateCcw } from 'lucide-react'
 import Link from "next/link"
-import { useRouter } from "next/navigation"
+import { useRouter } from 'next/navigation'
 import { safeGetItem, safeSetItem } from "@/lib/storage-utils"
 
 type Figure = {
@@ -230,11 +230,17 @@ export default function SeriacionesPage() {
       progress.seriaciones.correccion = true
       safeSetItem("smartlogy-progress", progress)
 
-      // Check if all seriaciones activities are complete
       if (progress.seriaciones.ordenamiento && progress.seriaciones.injerto && progress.seriaciones.correccion) {
         progress.evaluacion = progress.evaluacion || {}
         progress.evaluacion.seriaciones = true
         safeSetItem("smartlogy-progress", progress)
+        
+        // Also save to smartlogyCompletedActivities for consistency
+        const completed = JSON.parse(localStorage.getItem("smartlogyCompletedActivities") || "[]")
+        if (!completed.includes("seriaciones")) {
+          completed.push("seriaciones")
+          localStorage.setItem("smartlogyCompletedActivities", JSON.stringify(completed))
+        }
       }
 
       setTimeout(() => {

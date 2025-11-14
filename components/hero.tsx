@@ -3,7 +3,7 @@
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-background via-secondary to-background">
-      <div className="absolute inset-0 bg-[url('/disability-awareness.jpg')] opacity-30 bg-cover bg-center" />
+      <div className="absolute inset-0 bg-[url('https://hebbkx1anhila5yf.public.blob.vercel-storage.com/fondo-9mRVAiohnrnGfa8HtK8iXu7uw3KS7P.png')] opacity-30 bg-cover bg-center" />
 
       <div className="container mx-auto px-4 py-32 relative z-10">
         <div className="max-w-4xl mx-auto text-center">
@@ -11,7 +11,7 @@ export function Hero() {
             LOGyCOM
           </h1>
           <h2 className="text-2xl md:text-3xl font-semibold mb-6 text-foreground/90 animate-fade-in text-balance">
-            Discapacidades Unidas por la Comunicación
+            7 Discapacidades Unidas por la Comunicación
           </h2>
           <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in-up leading-relaxed text-justify">
             Transformamos ideas en soluciones tecnológicas que impulsan la inclusión social y laboral de personas con

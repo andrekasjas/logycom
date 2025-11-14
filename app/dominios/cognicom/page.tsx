@@ -5,7 +5,7 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { BookOpen, ArrowRight } from "lucide-react"
+import { BookOpen, ArrowRight } from 'lucide-react'
 import Image from "next/image"
 import { safeGetItem } from "@/lib/storage-utils"
 import { RouteMapModal } from "@/components/route-map-modal"
@@ -32,10 +32,10 @@ export default function CognicomPage() {
       calculatedProgress.diagnostic = 0
     }
 
-    // Habilidades module progress (2 activities: Escucha Activa y Habla)
+    // Habilidades module progress (4 activities: Escucha Activa, Habla, Lectura y Escritura)
     if (progress.habilidades) {
       const completed = Object.values(progress.habilidades).filter(Boolean).length
-      calculatedProgress.habilidades = Math.round((completed / 2) * 100)
+      calculatedProgress.habilidades = Math.round((completed / 4) * 100)
     } else {
       calculatedProgress.habilidades = 0
     }
@@ -48,28 +48,20 @@ export default function CognicomPage() {
       calculatedProgress.competencias = 0
     }
 
-    // Lecto Escritura module progress
-    if (progress.lectoescritura) {
-      const completed = Object.values(progress.lectoescritura).filter(Boolean).length
-      calculatedProgress.lectoescritura = Math.round((completed / 3) * 100)
-    } else {
-      calculatedProgress.lectoescritura = 0
-    }
-
-    // Conversacional module progress
-    if (progress.conversacional) {
-      const completed = Object.values(progress.conversacional).filter(Boolean).length
-      calculatedProgress.conversacional = Math.round((completed / 3) * 100)
-    } else {
-      calculatedProgress.conversacional = 0
-    }
-
-    // Empleo e Ideas de Negocio module progress
+    // Empleo module progress
     if (progress.empleo) {
       const completed = Object.values(progress.empleo).filter(Boolean).length
       calculatedProgress.empleo = Math.round((completed / 2) * 100)
     } else {
       calculatedProgress.empleo = 0
+    }
+
+    // Ideas de Negocio module progress
+    if (progress.ideasnegocio) {
+      const completed = Object.values(progress.ideasnegocio).filter(Boolean).length
+      calculatedProgress.ideasnegocio = Math.round((completed / 2) * 100)
+    } else {
+      calculatedProgress.ideasnegocio = 0
     }
 
     setModuleProgress(calculatedProgress)
@@ -88,16 +80,12 @@ export default function CognicomPage() {
       window.location.href = "/dominios/cognicom/competencias-comunicativas"
       return
     }
-    if (moduleId === "lectoescritura") {
-      window.location.href = "/dominios/cognicom/habilidades-lectoescritura"
-      return
-    }
-    if (moduleId === "conversacional") {
-      window.location.href = "/dominios/cognicom/habilidades-conversacionales"
-      return
-    }
     if (moduleId === "empleo") {
-      window.location.href = "/dominios/cognicom/empleo-ideas-negocio"
+      window.location.href = "/dominios/cognicom/empleo"
+      return
+    }
+    if (moduleId === "ideas-negocio") {
+      window.location.href = "/dominios/cognicom/ideas-negocio"
       return
     }
     const newEnrolled = [...enrolledModules, moduleId]
@@ -115,7 +103,7 @@ export default function CognicomPage() {
     {
       id: "habilidades",
       title: "Habilidades Comunicativas",
-      description: "Desarrolla escucha activa y habla mediante actividades interactivas y dinámicas",
+      description: "Desarrolla escucha activa, habla, lectura y escritura mediante actividades interactivas y dinámicas",
       level: "Básico-Intermedio",
     },
     {
@@ -126,23 +114,15 @@ export default function CognicomPage() {
       level: "Intermedio-Avanzado",
     },
     {
-      id: "lectoescritura",
-      title: "Habilidades Lecto Escritura",
-      description:
-        "Practica lectura y escritura mediante ejercicios de ordenamiento de textos, frases y completar textos",
-      level: "Básico-Intermedio",
-    },
-    {
-      id: "conversacional",
-      title: "Habilidades Conversacionales",
-      description:
-        "Desarrolla habilidades de conversación práctica con dinámicas interactivas y situaciones del día a día",
-      level: "Intermedio",
-    },
-    {
       id: "empleo",
-      title: "Empleo e Ideas de Negocio",
+      title: "Empleo",
       description: "Aprende a redactar para vender productos y realiza entrevistas efectivas sobre diversos temas",
+      level: "Avanzado",
+    },
+    {
+      id: "ideas-negocio",
+      title: "Ideas de Negocio",
+      description: "Desarrolla tu idea de emprendimiento definiendo materiales y precios del producto o servicio",
       level: "Avanzado",
     },
   ]

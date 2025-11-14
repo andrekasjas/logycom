@@ -1,16 +1,21 @@
 import { Card } from "@/components/ui/card"
-import { Users, Target, Lightbulb, Heart, Award, UserCheck, Scale, Sparkles } from "lucide-react"
+import { Users, Target, Lightbulb, Heart, Award, UserCheck, Scale, Sparkles } from 'lucide-react'
 
 const teamMembers = [
   {
     description:
+      "LOGyCOM nace del compromiso y la visión de las fonoaudiólogas Ángela Patricia Ayala Nieto, Ana María Collantes González, Isis Bayona Mojica, Andrea Stefanía Enríquez Oviedo, Jennifer Lizeth Mariño Archila y el ingeniero Richard Monrroy Sepúlveda, quienes dieron origen a este proyecto inclusivo orientado al aprendizaje funcional.",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/1%20card-leAOlko4IFEnhMV1nLuelqyYhA8rBH.jpeg",
+  },
+  {
+    description:
       "El prototipo inicial fue desarrollado por los fonoaudiólogos Ángela Patricia Ayala Nieto, Ubaldo Andrés Hernández Orjuela, Kimberly Jhoana Valencia Carrillo, Juan José Ruiz Dita, Lisneidy Zhairith Barrera Hincapié y el ingeniero Richard Monrroy Sepúlveda encargados de la parte organizacional y estructural de la plataforma.",
-    image: "/team-photo-1.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/2%20card-l029K2lCfqW6jsc7SOlcEm3HcogZGr.jpeg",
   },
   {
     description:
       "La consolidación de la página, sus dominios, actividades e inversión económica estuvo a cargo de las fonoaudiólogas Ángela Patricia Ayala Nieto, Luisa Fernanda García Rodríguez, Stefany Carolina Duarte Parra, Yuliana del Pilar Méndez Pimiento, Gislanny Yurladi Canencio Claros y Gloribeth Quijano Berbersí, quienes fortalecieron el enfoque inclusivo y funcional del proyecto.",
-    image: "/team-photo-2.png",
+    image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/3%20card-XMegOCc3Aymzc2duHJr9RdXbmyIjwO.jpg",
   },
 ]
 
@@ -112,14 +117,8 @@ export function AboutSection() {
         </div>
 
         <div className="max-w-5xl mx-auto">
-          <h3 className="text-3xl font-bold text-center mb-6">Nuestro Equipo</h3>
-          <p className="text-muted-foreground mb-12 leading-relaxed max-w-3xl mx-auto text-justify">
-            LOGyCOM nace del compromiso y la visión de las fonoaudiólogas Ángela Patricia Ayala Nieto, Ana María
-            Collantes González, Isis Bayona Mojica, Andrea Stefanía Enríquez Oviedo, Jennifer Lizeth Mariño Archila y el
-            ingeniero Richard Monrroy Sepúlveda, quienes dieron origen a este proyecto inclusivo orientado al
-            aprendizaje funcional.
-          </p>
-          <div className="grid md:grid-cols-2 gap-8">
+          <h3 className="text-3xl font-bold text-center mb-12">Nuestro Equipo</h3>
+          <div className="grid md:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <Card key={index} className="overflow-hidden hover:shadow-xl transition-shadow">
                 <div className="aspect-square overflow-hidden">

@@ -7,10 +7,10 @@ import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Volume2, CheckCircle2, XCircle, HelpCircle, ArrowLeft, Music, MessageCircle } from "lucide-react"
+import { Volume2, CheckCircle2, XCircle, HelpCircle, ArrowLeft, Music, MessageCircle, BookOpen, Users } from 'lucide-react'
 
 export default function HabilidadesComunicativasPage() {
-  const [selectedActivity, setSelectedActivity] = useState<"escucha" | "habla" | null>(null)
+  const [selectedActivity, setSelectedActivity] = useState<"escucha" | "habla" | "lectoescritura" | "conversacional" | null>(null)
   const [currentLevel, setCurrentLevel] = useState(1)
   const [completedLevels, setCompletedLevels] = useState<number[]>([])
 
@@ -542,6 +542,32 @@ export default function HabilidadesComunicativasPage() {
                 <h2 className="text-2xl font-bold">Habla</h2>
               </div>
               <p className="text-muted-foreground">Mejora tu expresión oral y comunicación</p>
+            </Card>
+
+            <Card
+              className="p-8 hover:shadow-lg transition-shadow cursor-pointer"
+              onClick={() => setSelectedActivity("lectoescritura")}
+            >
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <BookOpen className="w-6 h-6 text-primary" />
+                </div>
+                <h2 className="text-2xl font-bold">Habilidades Lecto Escritura</h2>
+              </div>
+              <p className="text-muted-foreground">Practica lectura y escritura con ejercicios interactivos</p>
+            </Card>
+
+            <Card
+              className="p-8 hover:shadow-lg transition-shadow cursor-pointer"
+              onClick={() => setSelectedActivity("conversacional")}
+            >
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center">
+                  <Users className="w-6 h-6 text-primary" />
+                </div>
+                <h2 className="text-2xl font-bold">Habilidades Conversacionales</h2>
+              </div>
+              <p className="text-muted-foreground">Desarrolla habilidades de conversación práctica</p>
             </Card>
           </div>
         </div>
