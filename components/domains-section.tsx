@@ -1,7 +1,7 @@
 "use client"
 
 import { Card } from "@/components/ui/card"
-import { Brain, ArrowRight, Sparkles } from "lucide-react"
+import { ArrowRight, Sparkles } from 'lucide-react'
 import Link from "next/link"
 
 export function DomainsSection() {
@@ -31,7 +31,11 @@ export function DomainsSection() {
 
               <div className="relative p-8 md:p-12 flex-1 flex flex-col">
                 <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                  <Brain className="w-10 h-10 text-primary" />
+                  <img
+                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-10-29%20at%209.59.37%20AM-cpDtn3mTMvUZF55FK2nisRp9yTh6vA.jpeg"
+                    alt="COGNICOM"
+                    className="w-14 h-14 object-contain"
+                  />
                 </div>
 
                 <h3 className="text-3xl font-bold mb-4 flex items-center gap-2">
@@ -54,9 +58,8 @@ export function DomainsSection() {
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     <li>• Habilidades Comunicativas</li>
                     <li>• Competencias Comunicativas</li>
-                    <li>• Habilidades Lecto Escritura</li>
-                    <li>• Habilidades Conversacionales</li>
-                    <li>• Empleo e Ideas de Negocio</li>
+                    <li>• Empleo</li>
+                    <li>• Ideas de Negocio</li>
                   </ul>
                 </div>
               </div>
