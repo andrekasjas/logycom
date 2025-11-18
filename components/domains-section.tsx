@@ -32,7 +32,7 @@ export function DomainsSection() {
               <div className="relative p-8 md:p-12 flex-1 flex flex-col">
                 <div className="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <img
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-10-29%20at%209.59.37%20AM-cpDtn3mTMvUZF55FK2nisRp9yTh6vA.jpeg"
+                    src="/LOGO_COGNICOM-removebg-preview.png"
                     alt="COGNICOM"
                     className="w-14 h-14 object-contain"
                   />

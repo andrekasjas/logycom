@@ -37,7 +37,7 @@ export function Header() {
           <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
             {isCognicom ? (
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-10-29%20at%209.59.37%20AM-cpDtn3mTMvUZF55FK2nisRp9yTh6vA.jpeg"
+                src="/LOGO_COGNICOM-removebg-preview.png"
                 alt="COGNICOM"
                 width={40}
                 height={40}

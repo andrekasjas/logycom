@@ -149,7 +149,7 @@ export default function CognicomPage() {
           <div className="max-w-4xl mx-auto text-center">
             <div className="w-32 h-32 mx-auto mb-8">
               <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/WhatsApp%20Image%202025-10-29%20at%209.59.37%20AM-cpDtn3mTMvUZF55FK2nisRp9yTh6vA.jpeg"
+                src="/LOGO_COGNICOM-removebg-preview.png"
                 alt="COGNICOM Logo"
                 width={128}
                 height={128}
